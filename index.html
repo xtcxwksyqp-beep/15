@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIL-OS | 全球軍事情報系統</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+TC:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mil-yellow: #ffc107;
+            --mil-dark: #0a0a0a;
+            --mil-gray: #1e1e1e;
+            --mil-green: #00ff41; /* 雷達綠 */
+        }
+
+        body {
+            background-color: var(--mil-dark);
+            color: #d1d1d1;
+            font-family: 'Noto Sans TC', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .mil-font { font-family: 'Black Ops One', cursive; letter-spacing: 2px; }
+        .tech-font { font-family: 'Share Tech Mono', monospace; }
+
+        /* 頂部系統狀態列 */
+        .system-status {
+            background: #000;
+            font-size: 0.75rem;
+            color: var(--mil-green);
+            padding: 5px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        /* 導覽列 */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.95) !important;
+            border-bottom: 2px solid var(--mil-yellow);
+        }
+
+        /* 英雄區 */
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1580237072617-771ad308ad4e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+
+        /* 掃描線效果 (選配) */
+        .hero-section::after {
+            content: " ";
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+
+        /* 卡片設計 */
+        .weapon-card {
+            background: var(--mil-gray);
+            border: 1px solid #333;
+            transition: 0.4s;
+            overflow: hidden;
+        }
+
+        .weapon-card:hover {
+            border-color: var(--mil-yellow);
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.3);
+        }
+
+        .card-img-container {
+            overflow: hidden;
+            height: 200px;
+        }
+
+        .card-img-top {
+            transition: 0.5s;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .weapon-card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+
+        /* 裝飾性邊框 */
+        .accent-border {
+            border-left: 5px solid var(--mil-yellow);
+            padding-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="system-status tech-font">
+        <div class="container d-flex justify-content-between">
+            <span>> SYSTEM READY: ENCRYPTION ACTIVE</span>
+            <span>LEVEL: UNCLASSIFIED // DATE: 2025-12</span>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand mil-font fs-3" href="index.html text-warning">MIL-OS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto tech-font">
+                    <li class="nav-item"><a class="nav-link active text-warning" href="#">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#weapons">ARSENAL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stats">INTEL</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-1 mil-font text-white mb-3">GLOBAL DEFENSE</h1>
+            <p class="tech-font fs-4 text-warning">> 正在接入全球武力數據庫...</p>
+            <div class="mt-4">
+                <a href="#weapons" class="btn btn-warning btn-lg px-5 fw-bold rounded-0">進入資料庫</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="weapons" class="container py-5">
+        <div class="accent-border mb-5">
+            <h2 class="mil-font h1 m-0">FEATURED ASSETS</h2>
+            <p class="text-secondary tech-font">精選先進武器平台檔案</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="weapon-card card h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Testflyging_av_f%C3%B8rste_norske_F-35_-1_%28cropped%29.jpg" class="card-img-top">
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="mil-font text-warning">F-35 LIGHTNING II</h5>
+                        <p class="small text-secondary">第五代多用途隱身戰鬥機。具備極高的感測器融合能力。</p>
+                        <a href="f35-details.html" class="btn btn-outline-warning btn-sm w-100 tech-font mt-3">ACCESS DATA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="weapon-card card h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://www.seaforces.org/usnships/cvn/CVN-78_DAT/CVN-78-USS-Gerald-R-Ford-051.jpg" class="card-img-top">
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="mil-font text-warning">FORD CLASS CVN</h5>
+                        <p class="small text-secondary">配備電磁彈射系統的最強航空母艦平台。</p>
+                        <a href="ford-details.html" class="btn btn-outline-warning btn-sm w-100 tech-font mt-3">ACCESS DATA</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="weapon-card card h-100 text-white">
+                    <div class="card-img-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG" class="card-img-top">
+                    </div>
+                    <div class="card-body p-4">
+                        <h5 class="mil-font text-warning">LEOPARD 2A7+</h5>
+                        <p class="small text-secondary">現代陸戰之王，裝甲與火力的極致平衡。</p>
+                        <a href="leopard-details.html" class="btn btn-outline-warning btn-sm w-100 tech-font mt-3">ACCESS DATA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-black border-top border-warning text-center">
+        <div class="container">
+            <p class="mil-font text-warning mb-2">MIL-OS // TACTICAL NETWORK</p>
+            <p class="small text-secondary tech-font">FOR EDUCATIONAL PURPOSES ONLY. ACCESS LOGGED.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

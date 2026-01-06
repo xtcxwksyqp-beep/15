@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豹2A7+ 主戰戰車 | 裝備詳情</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --army-green: #4b5320;
+            --mil-yellow: #ffc107;
+            --mil-dark: #0d0d0d;
+        }
+
+        body {
+            background-color: var(--mil-dark);
+            color: #d1d1d1;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .mil-font { font-family: 'Black Ops One', cursive; }
+
+        /* 陸軍迷彩裝飾 */
+        .army-header {
+            height: 10px;
+            background: linear-gradient(90deg, #4b5320, #8b9467, #4b5320);
+        }
+
+        /* 裝備性能雷達區背景 */
+        .info-panel {
+            background: rgba(30, 30, 30, 0.8);
+            border: 1px solid #444;
+            border-top: 3px solid var(--army-green);
+            padding: 25px;
+        }
+
+        .spec-item {
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .spec-label { color: #888; font-size: 0.9rem; }
+        .spec-value { color: var(--mil-yellow); font-weight: bold; }
+
+        .weapon-badge {
+            background-color: var(--army-green);
+            color: white;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            border-radius: 0;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="army-header"></div>
+
+<nav class="container mt-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">首頁</a></li>
+        <li class="breadcrumb-item"><a href="#" class="text-warning text-decoration-none">陸軍</a></li>
+        <li class="breadcrumb-item active text-white">Leopard 2A7+</li>
+    </ol>
+</nav>
+
+<main class="container py-5">
+    <div class="row">
+        <div class="col-lg-7">
+            <h1 class="mil-font display-4 text-white">LEOPARD 2A7+</h1>
+            <div class="weapon-badge">MAIN BATTLE TANK</div>
+            <p class="lead text-success fw-bold">德國裝甲工藝的終極進化型</p>
+
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Leopard_2_A7V_313_Bad_Frankenhausen_2024.JPG" class="img-fluid border border-secondary shadow-lg mb-4" alt="豹2A7">
+            
+            
+
+            <h3 class="mil-font text-white border-bottom border-success pb-2 mt-4 mb-3">設計特點</h3>
+            <p>Leopard 2A7+ 是專為城市戰與傳統對等戰爭設計的模組化升級版本。其核心提升在於全方位的防護能力，能夠抵禦來自 RPG 火箭彈、地雷以及簡易爆炸裝置（IED）的威脅。</p>
+            
+            <ul class="list-unstyled mt-4">
+                <li class="mb-3">
+                    <strong class="text-warning">● 火力系統：</strong> 配備 L55 120mm 滑膛砲，可發射可編程空炸彈藥，對付掩體後的敵人極為有效。
+                </li>
+                <li class="mb-3">
+                    <strong class="text-warning">● 模組化裝甲：</strong> 側裙與砲塔四周加裝了增強型複合裝甲，且可根據任務需求快速更換。
+                </li>
+                <li class="mb-3">
+                    <strong class="text-warning">● 數位化指揮：</strong> 整合了最先進的戰場管理系統（BMS），讓車長能即時掌握友軍位置與敵方動態。
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="info-panel sticky-top" style="top: 20px;">
+                <h4 class="mil-font text-center text-white mb-4">TACTICAL SPECS</h4>
+                
+                <div class="spec-item">
+                    <span class="spec-label">戰鬥全重 (Weight)</span>
+                    <span class="spec-value">67.5 Tons</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">主要武器 (Primary)</span>
+                    <span class="spec-value">120 mm L/55 Cannon</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">副武器 (Secondary)</span>
+                    <span class="spec-value">FLW 200 遙控武器站</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">最大時速 (Top Speed)</span>
+                    <span class="spec-value">72 km/h</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">發動機 (Engine)</span>
+                    <span class="spec-value">1,500 hp Multi-fuel</span>
+                </div>
+                <div class="spec-item">
+                    <span class="spec-label">乘員人數 (Crew)</span>
+                    <span class="spec-value">4 (車長/砲手/裝填手/駕駛)</span>
+                </div>
+
+                <div class="mt-4 p-3 bg-black border border-success">
+                    <h6 class="text-success fw-bold small mb-2">// 戰力評估</h6>
+                    <div class="progress mb-2" style="height: 10px; background: #222;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 95%">火力</div>
+                    </div>
+                    <div class="progress mb-2" style="height: 10px; background: #222;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 98%">防禦</div>
+                    </div>
+                    <div class="progress" style="height: 10px; background: #222;">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 85%">機動</div>
+                    </div>
+                </div>
+
+                <a href="index.html" class="btn btn-outline-success w-100 mt-4 fw-bold py-3">返回指揮中心</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-black py-4 text-center border-top border-secondary mt-5">
+    <p class="small text-secondary">IRON FIST // LAND FORCE COMMAND</p>
+</footer>
+
+</body>
+</html>

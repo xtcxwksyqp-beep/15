@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福特級航空母艦 | 裝備詳情</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-blue: #002b5c;
+            --mil-yellow: #ffc107;
+            --mil-dark: #0a0a0a;
+        }
+
+        body {
+            background-color: var(--mil-dark);
+            color: #d1d1d1;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+
+        .mil-font { font-family: 'Black Ops One', cursive; }
+
+        /* 頂部裝飾 */
+        .navy-header {
+            height: 10px;
+            background: repeating-linear-gradient(45deg, #333, #333 10px, var(--mil-yellow) 10px, var(--mil-yellow) 20px);
+        }
+
+        /* 數據方塊 */
+        .stat-card {
+            background: #161616;
+            border: 1px solid #333;
+            padding: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .stat-card:hover {
+            background: var(--navy-blue);
+            border-color: var(--mil-yellow);
+        }
+
+        .stat-value {
+            font-size: 1.5rem;
+            color: var(--mil-yellow);
+            font-weight: bold;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #888;
+        }
+
+        /* 技術亮點區 */
+        .tech-highlight {
+            border-left: 4px solid var(--mil-yellow);
+            background: rgba(255, 193, 7, 0.05);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navy-header"></div>
+
+<nav class="container mt-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html" class="text-warning text-decoration-none">首頁</a></li>
+        <li class="breadcrumb-item"><a href="#" class="text-warning text-decoration-none">海軍</a></li>
+        <li class="breadcrumb-item active text-white">Gerald R. Ford Class</li>
+    </ol>
+</nav>
+
+<main class="container py-5">
+    <div class="row">
+        <div class="col-12 mb-5">
+            <h1 class="mil-font display-3 text-white">USS GERALD R. FORD (CVN-78)</h1>
+            <p class="lead text-warning fw-bold">全球最強大的海上移動空軍基地</p>
+        </div>
+
+        <div class="col-lg-7">
+            <img src="https://www.seaforces.org/usnships/cvn/CVN-78_DAT/CVN-78-USS-Gerald-R-Ford-051.jpg" class="img-fluid border border-secondary mb-4" alt="福特級航母">
+            
+            <h3 class="mil-font text-white border-bottom border-warning pb-2 mb-4">戰略意義</h3>
+            <p>福特級航空母艦是美國海軍最新世代的核動力航空母艦，旨在取代尼米茲級。它不只是排水量驚人，更重要的是導入了多項革命性技術，顯著提升了艦載機的起降效率與自動化程度。</p>
+            
+            <div class="tech-highlight">
+                <h5 class="text-warning fw-bold">EMALS 電磁彈射系統</h5>
+                <p class="small m-0">取代傳統蒸汽彈射，能更精準地控制推力，支撐從輕型無人機到重型戰鬥機的彈射需求，並減少對機身的結構磨損。</p>
+            </div>
+
+            <div class="tech-highlight">
+                <h5 class="text-warning fw-bold">AAG 進場攔截索</h5>
+                <p class="small m-0">全新的電力控制攔截系統，大幅提升了艦載機降落時的安全係數與回收速度。</p>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="bg-dark p-4 border border-secondary">
+                <h4 class="mil-font text-center text-white mb-4">SHIP SPECIFICATIONS</h4>
+                
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="stat-card">
+                            <span class="stat-value">337m</span>
+                            <span class="stat-label">全長 (Length)</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat-card">
+                            <span class="stat-value">100k+</span>
+                            <span class="stat-label">排水量 (Tons)</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat-card">
+                            <span class="stat-value">75+</span>
+                            <span class="stat-label">艦載機 (Aircraft)</span>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="stat-card">
+                            <span class="stat-value">30+ kn</span>
+                            <span class="stat-label">極速 (Speed)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-3 border border-secondary bg-black">
+                    <h6 class="text-warning fw-bold">動力系統</h6>
+                    <p class="small">2具 A1B 核反應爐 (25年不需更換燃料)</p>
+                    <h6 class="text-warning fw-bold">編制人數</h6>
+                    <p class="small">約 4,539 人 (含航空大隊)</p>
+                </div>
+
+                <a href="index.html" class="btn btn-warning w-100 mt-4 fw-bold py-3">返回指揮中心</a>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-black py-4 text-center border-top border-secondary mt-5">
+    <p class="small text-secondary">SEA POWER // NAVAL INTELLIGENCE DIVISION</p>
+</footer>
+
+</body>
+</html>

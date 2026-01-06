@@ -1,0 +1,38 @@
+/* 設定背景顏色為深灰色，增加科技感 */
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+}
+
+/* 英雄區背景圖 */
+.hero-section {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1350&q=80'); /* 這裡之後換成你的軍事圖 */
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid #ffc107; /* 黃色警示色 */
+}
+
+/* 內容卡片樣式 */
+.feature-card {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border-color: #ffc107;
+}
+
+.icon-box {
+    font-size: 3rem;
+}
+
+.animate-title {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
